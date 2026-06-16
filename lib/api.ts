@@ -1,0 +1,1 @@
+export const API = process.env.NEXT_PUBLIC_API_URL || ''; export const fetchData = async (resource) => {try {const response = await fetch(`${API}/${resource}`); if (!response.ok) throw new Error('Network response was not ok'); return await response.json();} catch (error) {console.error('Fetch error:', error); return [];} };
